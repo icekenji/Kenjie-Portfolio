@@ -77,19 +77,6 @@ h2 {
   gap: 30px;
 }
 
-.card {
-  background: var(--card);
-  padding: 25px;
-  border-radius: 18px;
-  backdrop-filter: blur(12px);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 30px rgba(56,189,248,0.3);
-}
-
 .card h3 {
   margin-bottom: 10px;
   color: var(--accent);
@@ -230,6 +217,10 @@ body {
 /* ================= MOBILE RESPONSIVE ================= */
 @media (max-width: 768px) {
 
+  .projects{
+    justify-items: center;
+  }
+
   /* NAVBAR */
   nav {
     padding: 15px 6%;
@@ -286,25 +277,27 @@ body {
   .about {
     font-size: 1rem;
   }
-
-  /* CARDS */
+  /* Card */
+  .card {
+    width: 100%;
+    max-width: 420px;
+  }
   .projects {
     grid-template-columns: 1fr;
   }
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
   background: var(--card);
   padding: 25px;
   border-radius: 18px;
   backdrop-filter: blur(12px);
-  cursor: pointer;
-  height: 15vh;
-  gap: 40px;
 
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
