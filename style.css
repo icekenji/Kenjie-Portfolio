@@ -85,6 +85,7 @@ h2 {
 .card p {
   color: var(--muted);
   font-size: 0.95rem;
+  line-height: 1.7;
 }
 
 /* ================= CONTACT ================= */
@@ -293,7 +294,7 @@ body {
   gap: 12px;
 
   background: var(--card);
-  padding: 25px;
+  padding: 28px 25px 32px;
   border-radius: 18px;
   backdrop-filter: blur(12px);
 
