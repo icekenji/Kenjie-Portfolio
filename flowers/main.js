@@ -1,25 +1,23 @@
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", function () {
 
   const overlay = document.getElementById("intro-overlay");
   const music = document.getElementById("bg-music");
 
-  // DO NOT remove container here
+  overlay.addEventListener("click", function () {
 
-  overlay.addEventListener("click", () => {
+    // Start music
+    music.play().catch(() => {});
 
-    // 🎵 Start music
-    music.play();
+    // Resume animations
+    document.body.classList.remove("paused");
 
-    // 🌸 Start flower animation
-    document.body.classList.remove("container");
-
-    // ✨ Fade overlay
+    // Fade overlay
     overlay.style.opacity = "0";
 
-    setTimeout(() => {
+    setTimeout(function () {
       overlay.style.display = "none";
     }, 1000);
 
   });
 
-};
+});
