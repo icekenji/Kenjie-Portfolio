@@ -5,7 +5,8 @@
   margin: 0;
   box-sizing: border-box;
 }
-body.container * {
+/* Pause all animations until activated */
+body.paused * {
   animation-play-state: paused !important;
 }
 
@@ -24,11 +25,11 @@ body {
 }
 
 /* Overlay */
+/* FULLSCREEN INTRO OVERLAY */
 #intro-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.85);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,22 +40,7 @@ body {
 .intro-content {
   text-align: center;
   color: white;
-}
-
-#enter-btn {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #ff69b4;
-  border: none;
-  border-radius: 20px;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#enter-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #ff69b4;
+  font-family: sans-serif;
 }
 
 .intro-content h2 {
